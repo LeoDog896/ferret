@@ -1,11 +1,11 @@
 import {Command} from '@oclif/core'
 import Hyperbeam from 'hyperbeam'
 
-export default class Hello extends Command {
-  static description = 'Share TCP ports'
+export default class Beam extends Command {
+  static description = 'Beam any content'
 
   static examples = [
-    `$ ferret tcp 25565
+    `$ ferret beam
 
 `,
   ]
@@ -14,15 +14,11 @@ export default class Hello extends Command {
 
   // TODO password input with prompt / enviornment variable
 
-  static args = [{name: 'port', description: 'The port to use', required: true}]
-
   async run(): Promise<void> {
-    const {args} = await this.parse(Hello)
-    const port = args.port
-
     const beam = new Hyperbeam()
 
-    this.log(`Ferreting ${port}:`)
+    this.log('Ferreting:')
     this.log(`Have other peers run ferret connect ${beam.key}`)
+    process.stdin.pipe(beam).pipe(process.stdout)
   }
 }
