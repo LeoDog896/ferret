@@ -21,9 +21,7 @@ export default class Connect extends Command {
     const id = args.ID
 
     const beam = new Hyperbeam(id)
-
-    this.log(`Ferreting with ${id}:`)
-    this.log(`Have other peers run ferret connect ${id}`)
+    this.log(`Ferreted! Have other peers run ferret connect ${id}`)
 
     process.stdin.pipe(beam).pipe(process.stdout)
   }
