@@ -1,4 +1,5 @@
 import {Command} from '@oclif/core'
+import color from '@oclif/color'
 import Hyperbeam from 'hyperbeam'
 
 export default class Connect extends Command {
@@ -21,7 +22,7 @@ export default class Connect extends Command {
     const id = args.ID
 
     const beam = new Hyperbeam(id)
-    this.log(`Ferreted! Have other peers run ferret connect ${id}`)
+    this.log(`Ferreted! Have other peers run ${color.green(`ferret connect ${id}`)}`)
 
     process.stdin.pipe(beam).pipe(process.stdout)
   }

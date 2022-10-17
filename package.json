@@ -17,6 +17,7 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+    "@oclif/color": "^1.0.1",
     "@oclif/core": "^1.18.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.2",
@@ -27,6 +28,7 @@
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.65",
+    "@types/supports-color": "^8.1.1",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
