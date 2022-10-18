@@ -13,8 +13,6 @@ export default class Connect extends Command {
 
   static flags = {}
 
-  // TODO password input with prompt / enviornment variable
-
   static args = [{name: 'ID', description: 'The beam ID to connect to', required: true}]
 
   async run(): Promise<void> {
@@ -22,7 +20,6 @@ export default class Connect extends Command {
     const id = args.ID
 
     const beam = new Hyperbeam(id)
-    this.log(`Ferreted! Have other peers run ${color.green(`ferret connect ${id}`)}`)
 
     process.stdin.pipe(beam).pipe(process.stdout)
   }
