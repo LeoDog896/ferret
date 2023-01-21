@@ -21,7 +21,7 @@
     "@oclif/color": "^1.0.1",
     "@oclif/core": "^1.18.0",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.1.2",
+    "@oclif/plugin-plugins": "^2.2.2",
     "b4a": "^1.6.0",
     "blessed": "^0.1.81",
     "hi-base32": "^0.5.1",
