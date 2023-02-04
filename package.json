@@ -30,7 +30,7 @@
     "streamx": "^2.12.5"
   },
   "devDependencies": {
-    "@oclif/test": "^2.2.3",
+    "@oclif/test": "^2.3.4",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.66",
